@@ -1,3 +1,4 @@
+// Angular framework imports
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -5,7 +6,6 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   imports: [RouterOutlet],
   styleUrl: './app.scss',
-  template: '',
+  template: '<router-outlet />',
 })
 export class App {}
-
