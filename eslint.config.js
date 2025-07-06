@@ -23,7 +23,15 @@ module.exports = tseslint.config(
       'space-infix-ops': 'error',
       'no-trailing-spaces': 'error',
       'quotes': ['error', 'single'],
-      'eol-last': ['error', 'always']
+      'eol-last': ['error', 'always'],
+      'object-curly-spacing': ['error', 'always'],
+      'max-len': ['error', {
+        'code': 100,
+        'ignoreUrls': false,
+        'ignoreStrings': false,
+        'ignoreTemplateLiterals': true,
+        'ignoreComments': false
+      }]
     },
   },
   {
