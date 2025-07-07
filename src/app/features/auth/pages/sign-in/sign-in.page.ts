@@ -8,6 +8,11 @@ import { CardModule } from 'primeng/card';
 import { FloatLabel } from 'primeng/floatlabel';
 import { InputTextModule } from 'primeng/inputtext';
 
+// Shared
+import {
+  CustomButtonComponent
+} from '@shared/components/custom-button/custom-button.component';
+
 @Component({
   selector: 'sign-in-page',
   templateUrl: './sign-in.page.html',
@@ -18,6 +23,8 @@ import { InputTextModule } from 'primeng/inputtext';
     CardModule,
     FloatLabel,
     InputTextModule,
+
+    CustomButtonComponent,
   ]
 })
 export class SignInPage {

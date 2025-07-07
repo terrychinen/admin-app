@@ -17,11 +17,12 @@
         <small id="password-error" class="text-red-500 -mt-2 ml-1">Password is required</small>
       }
 
-      <p-button
-        label="Login"
-        type="submit"
-        styleClass="mt-4 w-full"
-        [disabled]="signInForm.invalid"></p-button>
+      <custom-button
+        label="login"
+        customClass="w-full mt-4"
+        [isDisabled]="signInForm.invalid"
+        [isSubmit]="true"
+      ></custom-button>
     </form>
   </p-card>
 </div>

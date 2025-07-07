@@ -18,7 +18,8 @@
     "paths": {
       "@app/*": ["src/app/*"],
       "@features/*": ["src/app/features/*"],
-      "@auth/*": ["src/app/features/auth/*"]
+      "@auth/*": ["src/app/features/auth/*"],
+      "@shared/*": ["src/app/shared/*"],
     }
   },
   "angularCompilerOptions": {
