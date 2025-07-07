@@ -13,6 +13,7 @@ import { ButtonModule } from 'primeng/button';
       [styleClass]="customClass()"
       [type]="isSubmit() ? 'submit' : 'button'"
       [disabled]="isDisabled()"
+      [loading]="isLoading()"
       (click)="onClick()"
     ></p-button>
   `,
@@ -22,6 +23,7 @@ export class CustomButtonComponent {
   customClass = input<string>('');
   isSubmit = input(false);
   isDisabled = input(false);
+  isLoading = input(false);
 
   clickEmitter = output<void>();
 

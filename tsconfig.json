@@ -20,6 +20,7 @@
       "@features/*": ["src/app/features/*"],
       "@auth/*": ["src/app/features/auth/*"],
       "@shared/*": ["src/app/shared/*"],
+      "@environments/*": ["src/environments/*"],
     }
   },
   "angularCompilerOptions": {

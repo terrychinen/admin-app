@@ -6,7 +6,7 @@ import { AbstractControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'text-error',
+  selector: 'input-text-error',
   template: `
     @if (errorMessage()) {
       <small class="text-red-500">
@@ -15,7 +15,7 @@ import { Subscription } from 'rxjs';
     }
   `,
 })
-export class TextErrorComponent {
+export class InputTextErrorComponent {
   control = input.required<AbstractControl | null | undefined>();
 
   errorMessage = signal<string | null>(null);

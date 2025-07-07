@@ -1,19 +1,35 @@
 <div class="flex items-center justify-center min-h-screen">
-  <p-card header="Sign in">
+  <p-card header="Sign in" class="w-full max-w-md">
     <form [formGroup]="signInForm" (ngSubmit)="login()" class="flex flex-col gap-4">
       <!-- Email -->
       <p-float-label variant="on" class="mt-4">
-        <input pInputText type="email" id="email" formControlName="email">
-        <label for="email">Email:</label>
+        <input
+          pInputText
+          id="email"
+          type="email"
+          formControlName="email"
+          autocomplete="off"
+          class="w-full">
+        <label for="email">Email</label>
       </p-float-label>
-      <text-error class="-mt-3 ml-1" [control]="signInForm.get('email')" />
+      <input-text-error class="-mt-3 ml-1" [control]="signInForm.get('email')" />
 
       <!-- Password -->
       <p-float-label variant="on" class="mt-2">
-        <input pInputText type="password" id="password" formControlName="password">
+        <input
+        pInputText
+        id="password"
+        type="password"
+        formControlName="password"
+        autocomplete="off"
+        class="w-full">
         <label for="password">Password</label>
       </p-float-label>
-      <text-error class="-mt-3 ml-1" [control]="signInForm.get('password')" />
+      <input-text-error class="-mt-3 ml-1" [control]="signInForm.get('password')" />
+
+      @if (errorMessage()) {
+        <span class="text-red-500 break-words">{{ errorMessage() }}</span>
+      }
 
       <!-- Submit -->
       <custom-button
@@ -21,6 +37,7 @@
         customClass="w-full mt-4"
         [isDisabled]="signInForm.invalid"
         [isSubmit]="true"
+        [isLoading]="isLoading()"
       ></custom-button>
     </form>
   </p-card>
