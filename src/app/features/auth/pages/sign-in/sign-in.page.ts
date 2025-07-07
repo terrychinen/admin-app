@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 // Primeng library imports
-import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { FloatLabel } from 'primeng/floatlabel';
 import { InputTextModule } from 'primeng/inputtext';
@@ -12,6 +11,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import {
   CustomButtonComponent
 } from '@shared/components/custom-button/custom-button.component';
+import { TextErrorComponent } from '@shared/components/text-error/text-error.component';
 
 @Component({
   selector: 'sign-in-page',
@@ -19,12 +19,12 @@ import {
   imports: [
     ReactiveFormsModule,
 
-    ButtonModule,
     CardModule,
     FloatLabel,
     InputTextModule,
 
     CustomButtonComponent,
+    TextErrorComponent,
   ]
 })
 export class SignInPage {

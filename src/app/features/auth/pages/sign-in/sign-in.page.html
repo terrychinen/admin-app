@@ -1,22 +1,21 @@
 <div class="flex items-center justify-center min-h-screen">
-  <p-card header="Sign in" >
+  <p-card header="Sign in">
     <form [formGroup]="signInForm" (ngSubmit)="login()" class="flex flex-col gap-4">
+      <!-- Email -->
       <p-float-label variant="on" class="mt-4">
         <input pInputText type="email" id="email" formControlName="email">
         <label for="email">Email:</label>
       </p-float-label>
-      @if (signInForm.get("email")?.touched && signInForm.get("email")?.invalid) {
-        <small id="email-error" class="text-red-500 -mt-2 ml-1">Email invalid</small>
-      }
+      <text-error class="-mt-3 ml-1" [control]="signInForm.get('email')" />
 
+      <!-- Password -->
       <p-float-label variant="on" class="mt-2">
         <input pInputText type="password" id="password" formControlName="password">
         <label for="password">Password</label>
       </p-float-label>
-      @if (signInForm.get("password")?.touched && signInForm.get("password")?.invalid) {
-        <small id="password-error" class="text-red-500 -mt-2 ml-1">Password is required</small>
-      }
+      <text-error class="-mt-3 ml-1" [control]="signInForm.get('password')" />
 
+      <!-- Submit -->
       <custom-button
         label="login"
         customClass="w-full mt-4"

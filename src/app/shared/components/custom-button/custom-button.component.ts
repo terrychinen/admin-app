@@ -1,4 +1,7 @@
+// Angular framework imports
 import { Component, input, output } from '@angular/core';
+
+// Primeng library imports
 import { ButtonModule } from 'primeng/button';
 
 @Component({
