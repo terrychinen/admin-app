@@ -4,16 +4,18 @@ import {
   provideBrowserGlobalErrorListeners,
   provideZonelessChangeDetection
 } from '@angular/core';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideHttpClient, withFetch } from '@angular/common/http';
 
-// Third-party libraries
+// Primeng
 import { providePrimeNG } from 'primeng/config';
-import Aura from '@primeuix/themes/aura';
 
 // Routes
 import { routes } from './app.routes';
+
+// Theme
+import { CustomPreset } from './app.theme';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -24,7 +26,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {
-        preset: Aura,
+        preset: CustomPreset,
       },
     }),
   ]
