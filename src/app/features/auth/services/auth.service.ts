@@ -27,6 +27,10 @@ export class AuthService {
       );
   }
 
+  isAuthenticated(): boolean {
+    return !!this.getToken();
+  }
+
   getToken(): string | null {
     return localStorage.getItem('access_token');
   }

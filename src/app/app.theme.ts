@@ -6,17 +6,17 @@ export const CustomPreset = definePreset(Aura, {
   semantic: {
     primary: {
       0: '#ffffff',
-      50: '{neutral.50}',
-      100: '{neutral.100}',
-      200: '{neutral.200}',
-      300: '{neutral.300}',
-      400: '{neutral.400}',
-      500: '{neutral.500}',
-      600: '{neutral.600}',
-      700: '{neutral.700}',
-      800: '{neutral.800}',
-      900: '{neutral.900}',
-      950: '{neutral.950}'
+      50: '{fuchsia.50}',
+      100: '{fuchsia.100}',
+      200: '{fuchsia.200}',
+      300: '{fuchsia.300}',
+      400: '{fuchsia.400}',
+      500: '{fuchsia.500}',
+      600: '{fuchsia.600}',
+      700: '{fuchsia.700}',
+      800: '{fuchsia.800}',
+      900: '{fuchsia.900}',
+      950: '{fuchsia.950}'
     },
   }
 });

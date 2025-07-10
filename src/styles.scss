@@ -1,3 +1,9 @@
 @use "primeicons/primeicons.css";
 @use "tailwindcss";
 @plugin "tailwindcss-primeui";
+
+.p-paginator .p-select .p-overlay .p-component {
+  bottom: 100% !important;
+  top: auto !important;
+  margin-bottom: 3rem;
+}

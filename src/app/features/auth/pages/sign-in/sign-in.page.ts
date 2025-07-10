@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 // Rxjs
 import { finalize } from 'rxjs';
 
-// Primeng library imports
+// Primeng
 import { CardModule } from 'primeng/card';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { InputTextModule } from 'primeng/inputtext';
@@ -73,7 +73,7 @@ export class SignInPage implements OnInit {
     )
     .subscribe({
       next: () => {
-        this._router.navigate(['/admin']);
+        this._router.navigate(['/admin'], { replaceUrl: true });
       },
       error: (err: HttpErrorResponse) => {
         if (err.status === 401) {

@@ -19,6 +19,7 @@
       "@app/*": ["src/app/*"],
       "@features/*": ["src/app/features/*"],
       "@auth/*": ["src/app/features/auth/*"],
+      "@products/*": ["src/app/features/products/*"],
       "@shared/*": ["src/app/shared/*"],
       "@environments/*": ["src/environments/*"],
     }
